@@ -1,5 +1,5 @@
 
-# SIMULATION OF INDEPENDENT PHENOTYPES #
+# Simulation of independent phenotypes #
 
 distance <- read.csv('DistancesR.csv')
 distance <- na.omit(distance)
