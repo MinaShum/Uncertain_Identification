@@ -13,14 +13,13 @@ for (i in Vid_label){
   c <- c+1
 }
 
-# Random indices for cross validation #
+# Random indices for cross validation 
 set.seed(123)
 total_numbers <- 3225
 num_groups <- 5
 num_to_choose_per_group <- 645
 groups <- list()
 available_numbers <- 1:total_numbers
-
 for (i in 1:num_groups) {
   random_numbers <- sample(available_numbers, num_to_choose_per_group, replace = FALSE)
   available_numbers <- setdiff(available_numbers, random_numbers)
@@ -28,20 +27,16 @@ for (i in 1:num_groups) {
 }
 groups[[1]][646] <- 3226
 
-
 ldal <- list()
 pl <- list()
 test <- list()
 model <- list()
 check <- list()
-
 for (fold in 1:num_groups){
   df_test <- df[groups[[fold]], ]
   df_train<- df[-groups[[fold]], ]
-  
   to.exclude <- c("Videos")
   test.set <- df_test[, !colnames(df) %in% to.exclude]
-  
   #LDA Fit
   lda.model <- lda(Videos ~ ., df_train)
   #Predict
@@ -62,7 +57,6 @@ for (fold in 1:num_groups){
   model[[fold]] <- lda.model
 }
 lda_result <- rbind(ldal[[1]], ldal[[2]], ldal[[3]], ldal[[4]], ldal[[5]])
-
 lda_result <- lda_result[order(as.numeric(lda_result$X1)), ]
 new_colnames <- c("Animal", "Prediction", 1:30)
 colnames(lda_result)[1:32] <- new_colnames
