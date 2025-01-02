@@ -5,7 +5,7 @@ This repository hosts the models and simulation used in our paper to reproduce t
 <br>
 - `Horse_model.stan`: This file contains the marginalization model used in STAN programming language for the horse dataset (simulated phenotype).
 - `Cattle_model.stan`: This file contains the marginalization model used in STAN programming language for the dairy cattle dataset (extracted phenotype).
-- `Model_Fitting`: This folder contains all modelings used in both datasets.
+- `Horse_Dataset`: This folder contains all modelings used in both datasets (Models used in the cattle dataset are similar).
 <br>
 - Image data and annotations for the horse dataset are available at: http://horse10.deeplabcut.org
 - Mathis, A., Biasi, T., Schneider, S., Yuksekgonul, M., Rogers, B., Bethge, M., & Mathis, M. W. (2021). Pretraining boosts out-of-domain robustness for pose estimation. In Proceedings of the IEEE/CVF winter conference on applications of computer vision (pp. 1859-1868).
