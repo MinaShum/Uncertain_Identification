@@ -3,7 +3,7 @@
 
 lml <- list()
 intermediate_df <- data.frame(matrix(nrow = 5, ncol = 1000))
-horse = as.factor(frame_an_index)
+horse <- as.factor(frame_an_index)
 
 models <- list()
 for (i in 1:9){
