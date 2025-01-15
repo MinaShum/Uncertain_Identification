@@ -1,7 +1,14 @@
-# How to do simulation and fit models
-This folder hosts the models and codes used in our pipeline for the horse dataset.
-<br>
-<br>
-* `DistancesR.csv`: This is the csv containing features built based on the coordinates.
-* `Simulation&LM.R`: This file contains the R code for running a simulation for independent phenotypes and how to run a linear model.
-* `VB`: This folder contains a working example using STAN model to fit a variational bayes on one simulation scenario of horse dataset. 
+## How to Do Simulation and Fit Models
+
+This folder hosts the models and code used in our pipeline for the **horse dataset**.
+
+- **`DistancesR.csv`**  
+  Contains the CSV file with features derived from the coordinates.
+
+- **`Simulation&LM.R`**  
+  Includes R code for:
+  - Running a simulation for independent phenotypes.
+  - Fitting a linear model.
+
+- **`VB`**  
+  A folder containing a working example using a Stan model to fit Variational Bayes on one simulation scenario of the horse dataset.
