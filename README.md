@@ -1,4 +1,4 @@
-# How to do simulation and fir models
+# How to do simulation and fit models
 This folder hosts the models and codes used in our pipeline for the horse dataset.
 <br>
 <br>
